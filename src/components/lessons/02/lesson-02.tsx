@@ -16,11 +16,12 @@ export const Lesson02 = () => {
             <Task />
             <div className={styles.playground} id="playground">
                 <div className={styles.row}>
-                    <Box text={'1'} className={styles.box01} color={'hotPink'} />
-                    <Box text={'2'} className={styles.box02} color={'turquoiseGreen'} />
+                    <Box text={'3'} className={styles.box03} color={'goldYellow'} />
+                    <Box text={'4'} className={styles.box04} color={'darkLavender'} />
                 </div>
                 <div className={styles.row}>
-                    <Box text={'5'} className={styles.box05} color={'dirtyWhite'} />
+                    <Box text={'1'} className={styles.box01} color={'hotPink'} />
+                    <Box text={'2'} className={styles.box02} color={'turquoiseGreen'} />
                 </div>
                 <div className={styles.row}>
                     <Box text={'6'} className={styles.box06} color={'richGreen'} />
@@ -28,8 +29,7 @@ export const Lesson02 = () => {
                     <Box text={'8'} className={styles.box08} color={'hotRed'} />
                 </div>
                 <div className={styles.row}>
-                    <Box text={'3'} className={styles.box03} color={'goldYellow'} />
-                    <Box text={'4'} className={styles.box04} color={'darkLavender'} />
+                    <Box text={'5'} className={styles.box05} color={'dirtyWhite'} />
                 </div>
                 <ConfettiFx
                     maxParticles={400}

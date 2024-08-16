@@ -73,7 +73,13 @@ export const Lesson07 = () => {
         <div className={styles.root}>
             <Task />
             <div className={styles.playground}>
-                <Box outlined color="pastelPink" icon="heartOutline" className={styles.icon} />
+                <Box
+                    outlined
+                    color="pastelPink"
+                    icon="heartOutline"
+                    className={styles.icon}
+                    iconDirection="left"
+                />
                 <Box
                     outlined
                     color={getColor(0)}
@@ -93,14 +99,14 @@ export const Lesson07 = () => {
                     color={getColor(2)}
                     icon="arrow"
                     className={styles.icon}
-                    iconDirection="up"
+                    iconDirection="right"
                 />
                 <Box
                     outlined
                     color={getColor(3)}
                     icon="arrow"
                     className={styles.icon}
-                    iconDirection="down"
+                    iconDirection="right"
                 />
                 <Box
                     outlined
@@ -114,7 +120,7 @@ export const Lesson07 = () => {
                     color={getColor(5)}
                     icon="arrow"
                     className={styles.icon}
-                    iconDirection="left"
+                    iconDirection="right"
                 />
                 <Box
                     outlined
@@ -123,13 +129,19 @@ export const Lesson07 = () => {
                     className={styles.icon}
                     iconDirection="right"
                 />
-                <Box outlined color="pastelPink" icon="heart" className={styles.icon} />
                 <ConfettiFx
                     maxParticles={200}
                     show={solutionStatus.solved}
                     style={{
                         display: solutionStatus.solved ? 'block' : 'none',
                     }}
+                />
+                <Box
+                    outlined
+                    color="pastelPink"
+                    icon="heart"
+                    className={styles.icon}
+                    iconDirection="right"
                 />
             </div>
         </div>
@@ -138,7 +150,7 @@ export const Lesson07 = () => {
 
 function getSolutionStatus() {
     const onStageDirections = Array.from(document.querySelectorAll('[data-direction]'), (icon) =>
-        icon.getAttribute('data-direction')
+        icon.getAttribute('data-direction'),
     ).join('');
 
     const resolution: { solved: boolean; solutionIndex: number } = {
